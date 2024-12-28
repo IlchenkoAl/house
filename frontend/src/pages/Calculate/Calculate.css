@@ -1,0 +1,153 @@
+/* Основной стиль страницы */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #1e3c72, #2a5298);
+    color: #ffffff;
+}
+
+/* Контейнер для калькулятора */
+.calculator-page {
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 40px;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовки */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    text-align: center;
+    color: #e0f7fa;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+/* Поля ввода */
+input[type="number"],
+input[type="email"],
+select {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #555;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 80%;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0 0 10px #4caf50;
+    border-color: #2e7d32;
+}
+
+/* Кнопки */
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1b5e20, #004d40);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+button:disabled {
+    background: #b0bec5;
+    cursor: not-allowed;
+}
+
+/* Блок с результатами */
+.result {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #66bb6a;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.result ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* Чекбоксы */
+div > input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.6);
+    accent-color: #66bb6a;
+}
+
+/* Центрирование email */
+form input[type="email"] {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .calculator-page {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    input[type="number"],
+    input[type="email"],
+    select {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
